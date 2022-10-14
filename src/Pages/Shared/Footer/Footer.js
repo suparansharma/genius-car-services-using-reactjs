@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
        <footer>
-        <p><small>©{this.getYear()} @suparan</small></p>
+        <p><small>@suparan</small></p>
        </footer>
     );
 };
