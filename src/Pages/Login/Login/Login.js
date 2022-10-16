@@ -32,6 +32,15 @@ const Login = () => {
     const navigateRegister = event =>{
         navigate('/register');
     }
+
+    let errorElement;
+    if (error) {
+       
+        errorElement=<div>
+            <p className='text-danger'>Error: {error?.message} </p>
+          </div>
+       
+      }
   return (
     <div className="container w-50 mx-auto">
       <h2 className="text-primary text-center mt-2">Please log in</h2>
@@ -52,6 +61,7 @@ const Login = () => {
           Submit
         </Button>
       </Form>
+      {errorElement}
       <p>New to Genius Car? <Link to="/register" className="text-danger pe-auto text-decoration-none" onClick={navigateRegister} >Please Register</Link> </p>
       <SocialLogin></SocialLogin>
     </div>
