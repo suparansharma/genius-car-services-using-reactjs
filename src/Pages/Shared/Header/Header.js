@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.png'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-
+import './Header.css'
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -36,7 +36,7 @@ const Header = () => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav>
+          <Nav className='right-site-items'>
             <Nav.Link as={Link} to="about">About</Nav.Link>
            { 
            user
